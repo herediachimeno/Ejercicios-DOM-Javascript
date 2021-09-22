@@ -1,18 +1,18 @@
 let principal = document.getElementById("principal");
 
-let edad = parseInt(window.prompt("¿Cuántos años tienes?"));
+let edad = parseInt(prompt("¿Qué edad tienes"));
 
 if (edad < 18) {
-  principal.innerHTML = `No eres mayor de edad, no puedes alquilar un coche`;
+  principal.innerHTML = `No eres mayor de edad y por tanto no puedes alquilar un coche`;
 } else if (edad >= 18) {
-  let carnet = window.prompt("¿Tienes carnet de conducir?");
+  let carnet = prompt("¿Tienes carnet de conducir?");
   if (carnet !== "si") {
-    principal.innerHTML = `No tienes carnet de conducir, no puedes alquiler un coche`;
+    principal.innerHTML = `No tienes carnet de conducir y por tanto no puedes alquiler un coche`;
   } else {
-    let nombre = window.prompt("Nombre");
-    let apellidos = window.prompt("Apellidos");
-    let ciudad = window.prompt("Ciudad");
-    let dias = parseInt(window.prompt("Días de alquiler"));
+    let nombre = prompt("Nombre");
+    let apellidos = prompt("Apellidos");
+    let ciudad = prompt("Ciudad");
+    let dias = parseInt(prompt("Días de alquiler"));
     let coste = 0;
 
     if (dias % 7 === 0) {
